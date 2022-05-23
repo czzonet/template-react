@@ -1,4 +1,4 @@
-# React Template with typescript | react 模版项目
+# Template React | react 项目模版
 
 ![Template](./doc/Template.png)
 

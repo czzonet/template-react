@@ -13,7 +13,7 @@ export const commonConfig: Configuration = {
   context: projectRoot,
   entry: resolvePath(projectRoot, "./src/index.tsx"),
   output: {
-    publicPath: "/",
+    // publicPath: "/",
     path: resolvePath(projectRoot, "./dist"),
     filename: "js/[name].[contenthash].js",
     hashSalt: projectName,
@@ -85,7 +85,7 @@ export const commonConfig: Configuration = {
   },
   plugins: [
     new webpackBar({
-      name: "react-template",
+      name: "template-react",
       color: "#61dafb",
     }),
     new webpackBuildNotifier(),
@@ -93,17 +93,17 @@ export const commonConfig: Configuration = {
     new HtmlWebpackPlugin({
       template: resolvePath(projectRoot, "./public/index.html"),
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: "*",
-          to: resolvePath(projectRoot, "./dist"),
-          context: resolvePath(projectRoot, "./public"),
-          filter: (resourcePath) =>
-            resourcePath != resolvePath(projectRoot, "./public/index.html"),
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: "*",
+    //       to: resolvePath(projectRoot, "./dist"),
+    //       context: resolvePath(projectRoot, "./public"),
+    //       filter: (resourcePath) =>
+    //         resourcePath != resolvePath(projectRoot, "./public/index.html"),
+    //     },
+    //   ],
+    // }),
     // new WebpackBundleAnalyzer.BundleAnalyzerPlugin(),
     new ForkTsCheckerWebpackPlugin({ async: false }),
   ],
