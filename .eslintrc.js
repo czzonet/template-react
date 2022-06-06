@@ -6,8 +6,8 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    // "plugin:react/recommended",
-    // "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
   ],
   parser: "@typescript-eslint/parser",
@@ -18,11 +18,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: [
-    // "react",
-    // "react-hooks",
-    "@typescript-eslint",
-  ],
+  plugins: ["react", "react-hooks", "@typescript-eslint"],
   ignorePatterns: ["*.js"],
   rules: {
     "react-hooks/rules-of-hooks": "error",
