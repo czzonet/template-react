@@ -1,0 +1,12 @@
+:root {
+  --blue-normal: #bae7ff;
+  --blue-dark: #91d5ff;
+
+  --white-normal: #efefef;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
