@@ -4,25 +4,31 @@ import styled from "styled-components";
 export const Hello = () => {
   return (
     <Style>
-      <div className="title">Hello react-typescript-template</div>
-
-      <p>Lorem ipsum dolor sit.</p>
+      <label>Hello template-react</label>
+      <main>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit odio
+        blanditiis qui ducimus, praesentium quod quas excepturi, facere natus
+        nihil et totam, aspernatur eveniet beatae hic aliquam soluta delectus
+        quibusdam..
+      </main>
     </Style>
   );
 };
 
 const Style = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
 
-  .title {
+  padding: 20px;
+
+  > label {
     font-size: 36px;
-
-    padding: 2%;
     text-align: center;
   }
 
-  p {
+  > main {
     text-align: center;
   }
 `;

@@ -4,7 +4,9 @@
 
   --white-normal: #efefef;
 }
-
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   margin: 0;
