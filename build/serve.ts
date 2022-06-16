@@ -16,7 +16,8 @@ import open from "open";
 
 const devConfig = merge(commonConfig, devConf);
 
-const HOST = "127.0.0.1";
+// const HOST = "127.0.0.1";
+const HOST = "server.internal"; // NOTE: add to hosts
 const PORTS = [8080, 3000];
 
 const setupCompilerMiddleware = (compiler: any, app: Express) => {
