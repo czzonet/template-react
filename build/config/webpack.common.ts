@@ -91,17 +91,20 @@ export const commonConfig: Configuration = {
     new HtmlWebpackPlugin({
       template: resolvePath(projectRoot, "./public/index.html"),
     }),
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: "*",
-    //       to: resolvePath(projectRoot, "./dist"),
-    //       context: resolvePath(projectRoot, "./public"),
-    //       filter: (resourcePath) =>
-    //         resourcePath != resolvePath(projectRoot, "./public/index.html"),
-    //     },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "*",
+          to: resolvePath(projectRoot, "./dist"),
+          context: resolvePath(projectRoot, "./public"),
+          filter: (resourcePath) => {
+            const r = !resourcePath.endsWith("index.html");
+            // console.log(r);
+            return r;
+          },
+        },
+      ],
+    }),
     // new WebpackBundleAnalyzer.BundleAnalyzerPlugin(),
     new ForkTsCheckerWebpackPlugin({ async: false }),
   ],
