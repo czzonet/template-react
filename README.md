@@ -9,7 +9,7 @@
 - [x] webpack
 - [x] styled-components
 - [x] immer
-- [x] recoil
+- [x] react-icons
 
 其中webpack自定义配置热重载服务器。使用ts-loader只编译成jsx，然后用babel-loader再编译，并使用单独的插件进行类型检查。
 
