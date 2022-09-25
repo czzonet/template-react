@@ -1,7 +1,6 @@
 import { Configuration } from "webpack";
 import { projectName, projectRoot, resolvePath } from "../env";
 import webpackBar from "webpackbar";
-import webpackBuildNotifier from "webpack-build-notifier";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import CopyWebpackPlugin from "copy-webpack-plugin";
@@ -88,7 +87,6 @@ export const commonConfig: Configuration = {
       name: "template-react",
       color: "#61dafb",
     }),
-    new webpackBuildNotifier(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: resolvePath(projectRoot, "./public/index.html"),
